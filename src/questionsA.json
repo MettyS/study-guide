@@ -2,10 +2,7 @@
   "questions": [
     {
       "question": "How might you determine the efficiency of an algorithm",
-      "answer": [
-        "\nDetermined by the Big O notation",
-        "\n"
-      ]
+      "answer": ["\nDetermined by the Big O notation", "\n"]
     },
     {
       "question": "Why is it important?",

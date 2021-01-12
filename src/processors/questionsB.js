@@ -3,8 +3,8 @@ const rawInput = require('../raw/questionsB');
 
 const processQuestions = () => {
   let file = {};
-  let questions = rawInput.split(/\s*Q:\s+/).map(question => {
-    let qObj = {}
+  let questions = rawInput.split(/\s*Q:\s+/).map((question) => {
+    let qObj = {};
     let tempQ = question.split('\n');
     qObj.question = tempQ[0];
     let tempA = tempQ.slice(1).join('\n');
@@ -20,6 +20,6 @@ const processQuestions = () => {
     }
     console.log('Saved!');
   });
-}
+};
 
 processQuestions();

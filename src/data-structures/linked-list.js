@@ -1,16 +1,12 @@
 const colors = require('colors');
 
-
 class Node {
-    /* IMPLEMENT ME */
+  /* IMPLEMENT ME */
 }
 
 class list {
-    /* IMPLEMENT ME */
+  /* IMPLEMENT ME */
 }
-
-
-
 
 // ***********
 //  EXAMPLE 1
@@ -120,19 +116,6 @@ class list {
 
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ***********
 //  EXAMPLE 2
@@ -248,50 +231,46 @@ let list = function (e) {
 };
 */
 
-
-
-
-
 //create a new instance of the list object
 let exampleList = new list();
 
-
 try {
-    //add new elements in the list
-    exampleList.insert(1);
-    exampleList.insert(2);
-    exampleList.insert(3);
-    exampleList.insert(4);
-    exampleList.insert(5);
-    exampleList.insert(6);
-    exampleList.insert(7);
-    exampleList.insert(8);
-    exampleList.insert(9);
-    //show the list with the new elements in the list
-    console.log(colors.green('----> show the list with the new elements in the list'));
-    exampleList.show();
+  //add new elements in the list
+  exampleList.insert(1);
+  exampleList.insert(2);
+  exampleList.insert(3);
+  exampleList.insert(4);
+  exampleList.insert(5);
+  exampleList.insert(6);
+  exampleList.insert(7);
+  exampleList.insert(8);
+  exampleList.insert(9);
+  //show the list with the new elements in the list
+  console.log(
+    colors.green('----> show the list with the new elements in the list')
+  );
+  exampleList.show();
 
-    //show the size in the list
-    console.log(colors.green('----> show the size in the list'));
-    exampleList.size();
+  //show the size in the list
+  console.log(colors.green('----> show the size in the list'));
+  exampleList.size();
 
-    //show the size in the list
-    console.log(colors.green('----> find the middle of the linked list'));
-    exampleList.findMiddle();
+  //show the size in the list
+  console.log(colors.green('----> find the middle of the linked list'));
+  exampleList.findMiddle();
 
-    //updated the second element and make it 5
-    exampleList.update(2, 5);
-    //show the list with updated element
-    console.log(colors.green('----> show the list with updated element'));
-    exampleList.show();
+  //updated the second element and make it 5
+  exampleList.update(2, 5);
+  //show the list with updated element
+  console.log(colors.green('----> show the list with updated element'));
+  exampleList.show();
 
-    //remove the 3 element in the list
-    exampleList.remove(3);
-    //show the list without the removed element
-    console.log(colors.green('----> show the list without the removed element'));
-    exampleList.show();
-}
-catch (er) {
-    console.log(colors.red('***** DID NOT PASS TESTS *****'));
-    console.log(colors.red('error: \n', er));
+  //remove the 3 element in the list
+  exampleList.remove(3);
+  //show the list without the removed element
+  console.log(colors.green('----> show the list without the removed element'));
+  exampleList.show();
+} catch (er) {
+  console.log(colors.red('***** DID NOT PASS TESTS *****'));
+  console.log(colors.red('error: \n', er));
 }

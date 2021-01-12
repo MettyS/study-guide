@@ -1,19 +1,15 @@
 const colors = require('colors');
 
-
 class HashMap {
   /* IMPLEMENT ME */
 }
 
-
-
-
 // ***********
-//  EXAMPLE 2 
+//  EXAMPLE 2
 // ***********
 
-// NOTE -> there are simpler solutions online, 
-// this one uses syntax that's specifically for creating a 
+// NOTE -> there are simpler solutions online,
+// this one uses syntax that's specifically for creating a
 // whole new map prototype built off of js's underlying map infrastructure
 
 /*
@@ -123,8 +119,6 @@ HashMap.prototype = {
 }
 */
 
-
-
 // creation
 
 let my_map = new HashMap();
@@ -134,15 +128,15 @@ try {
 
   let a_key = {};
   let a_value = {
-    struct: "structA"
+    struct: 'structA',
   };
   let b_key = {};
   let b_value = {
-    struct: "structB"
+    struct: 'structB',
   };
   let c_key = {};
   let c_value = {
-    struct: "structC"
+    struct: 'structC',
   };
 
   my_map.put(a_key, a_value);
@@ -152,13 +146,13 @@ try {
   // retrieval
 
   if (my_map.get(a_key) !== a_value) {
-    throw ("fail1")
+    throw 'fail1';
   }
   if (my_map.get(b_key) !== c_value) {
-    throw ("fail2")
+    throw 'fail2';
   }
   if (prev_b !== b_value) {
-    throw ("fail3")
+    throw 'fail3';
   }
 
   // deletion
@@ -168,29 +162,27 @@ try {
   let a2_existed = my_map.del(a_key);
 
   if (a_existed !== true) {
-    throw ("fail4")
+    throw 'fail4';
   }
   if (c_existed !== false) {
-    throw ("fail5")
+    throw 'fail5';
   }
   if (a2_existed !== false) {
-    throw ("fail6")
+    throw 'fail6';
   }
-
 
   // primitive types keys
   let d_value = {
-    struct: "structD"
+    struct: 'structD',
   };
   my_map.put(1, d_value);
 
   if (my_map.get(1) !== d_value) {
-    throw ("fail7")
+    throw 'fail7';
   }
 
   console.log(colors.green('YAY! You passed all the tests ^-^'));
-}
-catch(er) {
+} catch (er) {
   console.log(colors.red('***** DID NOT PASS TESTS *****'));
   console.log(colors.red('error: \n', er));
 }

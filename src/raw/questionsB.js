@@ -210,4 +210,4 @@ https://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/dat
 
 Q: create a linked list in JS 
 ** ATTENTION ** look in ./src/datastructures and README.md line 11
-https://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/data-structures-linked-lists/linked-list-example-es6.js (line 1 to 150 or so)`
+https://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/data-structures-linked-lists/linked-list-example-es6.js (line 1 to 150 or so)`;

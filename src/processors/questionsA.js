@@ -4,13 +4,13 @@ const rawInput = require('../raw/questionsA');
 
 const processQuestions = () => {
   let file = {};
-  let questions = rawInput.split(/Q:\s*/).map(question => {
-    let qObj = {}
-    let tempQ = question.split(/\n+/);//replace(/\n+/g, "\n").split('\n');
+  let questions = rawInput.split(/Q:\s*/).map((question) => {
+    let qObj = {};
+    let tempQ = question.split(/\n+/); //replace(/\n+/g, "\n").split('\n');
     qObj.question = tempQ[0];
-    let tempA = tempQ.slice(1).map(line => {
+    let tempA = tempQ.slice(1).map((line) => {
       let returnedLine = line;
-      if(line[0] !== '-' && line[0] !== '(')
+      if (line[0] !== '-' && line[0] !== '(')
         returnedLine = '\n' + returnedLine;
 
       return returnedLine;
@@ -27,6 +27,6 @@ const processQuestions = () => {
     }
     console.log('Saved!');
   });
-}
+};
 
 processQuestions();

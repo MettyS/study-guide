@@ -8,7 +8,6 @@ class BinarySearchTree {
   /* IMPLEMENT ME */
 }
 
-
 // ***********
 //  EXAMPLE 1 - (partially completed only)
 // ***********
@@ -79,27 +78,8 @@ class BinarySearchTree {
 }
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ***********
-//  EXAMPLE 2 
+//  EXAMPLE 2
 // ***********
 
 /*
@@ -225,13 +205,6 @@ class BinarySearchTree {
 }
 */
 
-
-
-
-
-
-
-
 // create an object for the BinarySearchTree
 let BST = new BinarySearchTree();
 
@@ -264,7 +237,6 @@ try {
   // Removing node with no children
   BST.remove(5);
 
-
   //          15
   //         /  \
   //        10   25
@@ -272,7 +244,6 @@ try {
   //      7  13 22  27
   //       \    /
   //        9  17
-
 
   let root2 = BST.getRootNode();
 
@@ -289,7 +260,6 @@ try {
   //      9  13 22  27
   //            /
   //           17
-
 
   let root3 = BST.getRootNode();
 
@@ -308,16 +278,15 @@ try {
   let root = BST.getRootNode();
   // prints 9 10 13 17 22 25 27
 
-  console.log(colors.green("inorder traversal"));
+  console.log(colors.green('inorder traversal'));
   BST.inorder(root1);
 
-  console.log(colors.green("postorder traversal"));
+  console.log(colors.green('postorder traversal'));
   BST.postorder(root2);
 
-  console.log(colors.green("preorder traversal"));
+  console.log(colors.green('preorder traversal'));
   BST.preorder(root3);
-}
-catch (er) {
+} catch (er) {
   console.log(colors.red('***** DID NOT PASS TESTS *****'));
   console.log(colors.red('error: \n', er));
 }
