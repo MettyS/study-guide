@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const colors = require('colors');
-const { QUESTION_SET } = require('./config');
+let { QUESTION_SET } = require('./config');
 const questionsA = require('./questionsA.json');
 const questionsB = require('./questionsB.json');
 
@@ -109,6 +109,7 @@ rl.on('line', (input) => {
   if (!running) {
     if (input === 'a' || input === 'b' || input === 'ab') {
       QUESTION_SET = input;
+      printQSet();
     } else if (input === 'start') {
       running = true;
       currentSet = QUESTION_SET === 'ab' ? 'a' : QUESTION_SET;
