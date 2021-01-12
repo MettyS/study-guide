@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Create an algorithm for counting how many times a word appears in a document.",
+      "answer": "\n*\nconst lib = {}\n\n'hello hey hello hey'.split(' ').forEach(word => {\n  lib[word] = lib[word] + 1 || 1\n})\nconsole.log(lib)\n*\n\nFor this answer, the candidate should be directed to the choice of data structure if they need some hints.\n\nThe best choice of data structure for this will be a Hashmaps. \n- First, we will go through the document hashing each word in a hashmap and as we do so, we will increment the count of each word. \n- Hashmaps are key-value pairs. In this case, the word will be the key to hash and its value will be the count of the word. \n- This is O(1) operation. Then once all the words are hashed, we will do a lookup of the word that we want and find and from the word, we can get its count to find out how many times the word is used in the document. \n- This lookup will be a O(1) operation. Hashmaps will be the right choice due to its O(1) insert and lookup."
+    },
+    {
+      "question": "Develop an algorithm to find the Fibonacci series of a given number.",
+      "answer": "\nfunction fib(n) {\n  if (n < 2) {return n} // base case\n\n  return fib(n - 1) + fib(n - 2);\n}\nconsole.log(fib(7))\n\nUsing recursion would be an elegant solution from a readability point of view since it will require 2-3 lines of code.\n\nYou will have a base case to stop the recursion – this could be:\nif (n<=2)\nreturn 1\n\nThen you will recursively call the function to add the previous 2 numbers – this will be something like:\nreturn fib(n-1) + fib(n-2)\n\nEXTRA:\n- Define what is a Fibonacci sequence is (The Fibonacci sequence is one where a number is found by adding up the two numbers before it. \n- Starting with 0 and 1, the sequence goes 0, 1, 1, 2, 3, 5, 8, 13...). What is the 7th value in the Fibonacci sequence? \n- Can you explain how you came up with your solution?"
+    },
+    {
+      "question": "What is the runtime of the Fibonacci recursive algorithm? what can you tell me about this runtime?",
+      "answer": "\nExponential O(2^n). This is not a desirable runtime if we were to find the Fibonacci sequence for a large number because the runtime will grow exponentially. \n\nAlthough the code looks very elegant, it would be better to implement this using iterative approach or using memorization to cache the results of each recursive calls to be used without calling the function again."
+    },
+    {
+      "question": "You are given a dataset. How would you create a balanced binary search tree from it?",
+      "answer": "\nconst data = [1,2,3,4,5]\n\n//    3\n//  2   4\n// 1     5\n\nA balanced binary search tree can be defined as one where the height of the left and right subtree can’t differ by more than one. \nWhich means that there should be almost equal dataset on each sub tree of the left and right child of the root. \nIn order to do this, find out if the data is sorted. If it is not, then you can use one of the efficient sorting algorithms such as quicksort or merge sort to sort the data. \nOnce the data is sorted, then we will find the middle of the dataset and use that as the root. \nThis way we can say that there will be almost equal amount of data on each side of the middle element.\n\nThen we will use the same strategy to find the middle of the left hand side to find the left child and the middle of the right hand side to find the right child. \nAnd we will continue doing this on each halves recursively until there is no more element left."
+    },
+    {
+      "question": "Design an algorithm to find the nth element in a linked list in constant time.",
+      "answer": "\nLinked list do not allow random access. \nTherefore it is not possible to find the nth element in constant time. \nThe only way you can have a O(1) access is if you are finding the 1st element. \nOtherwise finding an element in a linked list will require O(n) run time."
+    },
+    {
+      "question": "A binary search tree has 20 nodes and is relatively balanced. The root is considered to be at level 0. How many nodes are there at level 4?",
+      "answer": "\nAnswer:\nlevel 0 = 1 node\nlevel 1 = 2 nodes\nlevel 2 = 4 nodes\nlevel 3 = 8 does\nlevel 4 = only 5 nodes left to make a total of 20 (these are their values: 1 2 4 8 16)"
+    },
+    {
+      "question": "You are given a dataset containing positive and negative integers. Write an algorithm to find the largest sum in a continuous sequence.",
+      "answer": "\n<code>\nlet maxSubarray = function(arr) {\n    let maxEndingHere = 0;\n    let maxSoFar = 0;\n    for (let i = 0; i < arr.length; i++) {\n        let item = arr[i];\n        maxEndingHere = Math.max(0, maxEndingHere + item);\n        maxSoFar = Math.max(maxSoFar, maxEndingHere);\n        console.log(item, maxEndingHere, maxSoFar);\n    }\n    return maxSoFar;\n};\n</code>"
+    },
+    {
+      "question": "Write a function to remove duplicates in a linked list.",
+      "answer": "\n<code>\nlet list = new LinkedList;\n\nlet currentNode1 = list.head;\nwhile (currentNode1) {\n\n   let currentNode2 = currentNode1.next;\n   while (currentNode2) {\n     if (currentNode2.value === currentNode1.value) {\n       list.remove(currentNode2);\n     }\n     currentNode2 = currentNode2.next;\n   }\n\n   currentNode1 = currentNode1.next;\n}\n</code>\n\nThe common solution is O(n^2). Check every node data against every other node data and if find dupli­cates, delete that node.\n\nSolve this in O(n) if they have done it in O(n^2). The O(n) will require different approach:\n- If it is a sorted list then check the current node with the next one and delete the duplicates\n- If the list is not sorted, create a hash table\n- Iterate through the list - if the data is present in the hash table, delete that node otherwise continue adding the node value into the hash table - run time is O(n), assuming hash table insertion is O(1)"
+    },
+    {
+      "question": "Write an algorithm that takes an alphanumeric phone number and returns its actual phone number. For example if you type 1-800-Flowers it should return 1-800-3569377. You can ignore spaces and any punctuation). What is the runtime of your algorithm?",
+      "answer": "\n** NOTE ** this solution is not well written\n<code>\nconst numberKeys = {\n   'abc': 1,\n   'def': 2,\n   'ghi': 3,\n}\n\n'1-800-Flowers'.split('').forEach((char, idx) => {\n\nObject.keys(numberKeys).forEach(el => {\n\n     number[el]\n   })\n\n})\n\nconsole.log(Object.keys(numberKeys))\n</code>"
+    },
+    {
+      "question": "Given the following expression, write an algorithm to check if the formula has correctly implemented parenthesis (check to see if there are any lone parenthesis. That every open parenthesis has a closed on) - Check if the formula has any unmatched parenthesis.",
+      "answer": "\nTest cases:\nx*(x+z) + x/(y-z) + d should return true\nt – (s-k + x should return false\n\nHow would you change this to account for other parenthesis such as {}, []."
+    },
+    {
+      "question": "Explain how you would write an algorithm to find the middle element of a linked list",
+      "answer": "\n - Parse the linked list element by element from the beginning to the end and count the total number of elements. \n - After that parse the list again and stop at the element with the index = counter/2"
+    },
+    {
+      "question": "write an O(n^2) / O(1) / O( n ) /  O(log n) algorithm ",
+      "answer": "\nO(1):\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/big-o-notation/o-1-example.js \n\nO(n):\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/big-o-notation/o-n-example.js \n\nO(2n):\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/big-o-notation/o-2-n-example.js \n\nO(log n):\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/big-o-notation/o-log-n-example.js \n\nO(n^k):\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/big-o-notation/o-n-k-example.js"
+    },
+    {
+      "question": "give a binary search tree example in JS ",
+      "answer": "\n** ATTENTION ** look in ./src/datastructures and README.md line 11\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/data-structures-binary-trees/binary-search-tree-example.js"
+    },
+    {
+      "question": "give an example of a hash map ",
+      "answer": "\n** ATTENTION ** look in ./src/datastructures and README.md line 11\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/data-structures-hash-maps/hash-map-example.js"
+    },
+    {
+      "question": "create a linked list in JS ",
+      "answer": "\n** ATTENTION ** look in ./src/datastructures and README.md line 11\nhttps://github.com/mariusbanea/web-developers-toolkit/blob/master/algorithms/data-structures-linked-lists/linked-list-example-es6.js (line 1 to 150 or so)"
+    }
+  ]
+}

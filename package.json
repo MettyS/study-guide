@@ -1,0 +1,25 @@
+{
+  "name": "study-guide",
+  "version": "1.0.0",
+  "description": "study guide for Thinkful data-structures and algorithms",
+  "main": "server.js",
+  "scripts": {
+    "linked-list": "node src/data-structures/linked-list.js",
+    "binary-tree": "node src/data-structures/binary-search-tree.js",
+    "map": "node src/data-structures/map.js",
+    "start": "nodemon src/server.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "prettier": "2.2.1"
+  }
+}
