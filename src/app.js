@@ -23,7 +23,8 @@ printQSet = () => {
 resetStatus = () => {
   currentSet = QUESTION_SET;
   questionNum = 0;
-  showAnswer = false;
+  showingAnswer = false;
+  showingQuestion = false;
   running = false;
 };
 
@@ -129,6 +130,7 @@ rl.on('line', (input) => {
       resetStatus();
       console.log('stopping quiz early...');
       console.log(helpMsg.guide);
+      return;
     }
 
     if (!showingQuestion) {
