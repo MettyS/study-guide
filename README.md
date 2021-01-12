@@ -13,7 +13,7 @@ start-up steps:
 
 ## FOR DATA STRUCTURE TESTS:
 
-populate the /_ IMPLEMENT ME _/'s in /src/data-structures/
+populate the /* IMPLEMENT ME */'s in /src/data-structures/
 
 - npm run linked-list
 - npm run binary-tree
